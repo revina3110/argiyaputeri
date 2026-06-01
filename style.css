@@ -1,0 +1,411 @@
+/* ==========================================================================
+   1. RESET & GLOBAL STYLES (Nuansa Hitam, Abu-abu Gelap & Minimalis)
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #0d0d0d; /* Background utama hitam pekat */
+    color: #cccccc; /* Warna teks abu-abu terang */
+    line-height: 1.7;
+}
+
+h1, h2, h3 {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   2. NAVBAR (NAVIGATION BAR)
+   ========================================================================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: #141414; /* Abu-abu gelap */
+    border-bottom: 1px solid #222222;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+.navbar nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar nav ul li {
+    margin-left: 30px;
+}
+
+.navbar nav ul li a {
+    text-decoration: none;
+    color: #888888;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.navbar nav ul li a:hover {
+    color: #ffffff;
+}
+
+/* GLOBAL BUTTON STYLE */
+.btn-more {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #ffffff;
+    color: #0d0d0d;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 25px;
+    transition: all 0.3s ease;
+    border: 2px solid #ffffff;
+}
+
+.btn-more:hover {
+    background-color: transparent;
+    color: #ffffff;
+}
+
+.section-tag {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #888888;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* ==========================================================================
+   3. HERO SECTION (HOME)
+   ========================================================================== */
+.hero-section {
+    padding: 100px 8%;
+    background: linear-gradient(180deg, #141414 0%, #0d0d0d 100%);
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 52px;
+    margin-bottom: 10px;
+}
+
+.hero-text h2 {
+    font-size: 22px;
+    color: #888888;
+    font-style: italic;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 15px;
+    color: #aaaaaa;
+    max-width: 500px;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 380px;
+    border-radius: 4px;
+    object-fit: cover;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+/* Placeholder visual seandainya file gambar belum ditaruh di folder */
+.image-placeholder {
+    width: 320px;
+    height: 320px;
+    background-color: #1a1a1a;
+    border: 1px dashed #444444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555555;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+/* ==========================================================================
+   4. ABOUT SECTION (BIOGRAPHY + ALBUM COVER)
+   ========================================================================== */
+.about-section {
+    padding: 90px 8%;
+    background-color: #111111; /* Nuansa abu-abu gelap album */
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 15px;
+    color: #999999;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.album-cover-img {
+    width: 100%;
+    max-width: 340px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border: 1px solid #333333;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+}
+
+/* ==========================================================================
+   5. TRACKLIST SECTION (5-COLUMN GRID)
+   ========================================================================== */
+.tracks-section {
+    padding: 90px 8%;
+    background-color: #0d0d0d;
+    text-align: center;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.tracks-section h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.section-subtitle {
+    color: #666666;
+    font-size: 14px;
+    margin-bottom: 50px;
+}
+
+/* Konfigurasi Grid 5 kolom menyerupai struktur 5 karakter favorit */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.track-card {
+    background-color: #141414;
+    border: 1px solid #222222;
+    padding: 40px 20px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 220px;
+}
+
+.track-card:hover {
+    background-color: #1c1c1c;
+    border-color: #444444;
+    transform: translateY(-5px);
+}
+
+.card-number {
+    font-size: 28px;
+    font-weight: 300;
+    color: #444444;
+}
+
+.track-card h3 {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.card-link {
+    font-size: 12px;
+    color: #888888;
+    text-decoration: none;
+    border-bottom: 1px solid #444444;
+    padding-bottom: 2px;
+    transition: color 0.3s;
+}
+
+.card-link:hover {
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+/* ==========================================================================
+   6. FAVORITE SONG SECTION (MAIN FOCUS)
+   ========================================================================== */
+.favorite-section {
+    padding: 100px 8%;
+    background: linear-gradient(180deg, #0d0d0d 0%, #141414 100%);
+    text-align: center;
+}
+
+.fav-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #111111;
+    padding: 50px;
+    border: 1px solid #222222;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.fav-content h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.fav-content p {
+    font-size: 15px;
+    color: #aaaaaa;
+    line-height: 1.9;
+    text-align: justify;
+}
+
+/* ==========================================================================
+   7. FOOTER (DEVELOPER INFORMATION)
+   ========================================================================== */
+footer {
+    background-color: #070707;
+    padding: 70px 8% 25px;
+    border-top: 1px solid #1a1a1a;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.footer-box h3 {
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.footer-box p {
+    color: #666666;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.footer-box a {
+    color: #888888;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-box a:hover {
+    color: #ffffff;
+}
+
+.insta-link {
+    color: #ffffff !important;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 25px;
+    font-size: 12px;
+    color: #444444;
+}
+
+/* ==========================================================================
+   8. RESPONSIVE DESIGN MEDIA QUERIES (Supaya Rapih Di Handphone)
+   ========================================================================== */
+@media (max-width: 992px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .navbar nav ul li {
+        margin: 0 12px;
+    }
+    .hero-container, .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-text p, .about-text p {
+        margin: 0 auto;
+    }
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .footer-container {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+    }
+}
